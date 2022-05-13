@@ -63,7 +63,9 @@ public class GetStatistics implements Runnable {
                             a.getClass() != Goat.class &&
                             a.getClass() != Cow.class &&
                             a.getClass() != Rabbit.class &&
-                            a.getClass() != Sheep.class).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                            a.getClass() != Sheep.class &&
+                            a.getClass() != Kangaroo.class &&
+                            a.getClass() != Snake.class).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                     .entrySet()
                     .stream()
                     .max(Map.Entry.comparingByValue())
