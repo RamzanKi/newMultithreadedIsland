@@ -20,35 +20,12 @@ public class Rabbit extends Herbivore {
     private int starvationCount = 7;
     private double weightLoss = 1;
 
-    public double getFoodForSatiety() {
-        return foodForSatiety;
-    }
-
-    public int getNumberOfMovesAfterHunger() {
-        return numberOfMovesAfterHunger;
-    }
-
-    public int getStarvationCount() {
-        return starvationCount;
-    }
-
-    public void setStarvationCount(int starvationCount) {
-        this.starvationCount = starvationCount;
-    }
-
-    public double getWeightLoss() {
-        return weightLoss;
-    }
-
-    public void setWeightLoss(double weightLoss) {
-        this.weightLoss = weightLoss;
-    }
-
 
     public Rabbit(int i, int j) {
         this.locIndexi = i;
         this.locIndexj = j;
     }
+
     @Override
     public int getMaxAmountInCell() {
         return maxAmountInCell;
@@ -56,7 +33,6 @@ public class Rabbit extends Herbivore {
     public String getIndex() {
         return this.locIndexi +":"+ this.locIndexj;
     }
-
     public void setIndex(int i, int j) {
         this.locIndexi = i;
         this.locIndexj = j;
@@ -95,6 +71,30 @@ public class Rabbit extends Herbivore {
                 this.satiety = foodForSatiety;
             }
         }
+    }
+
+    public double getFoodForSatiety() {
+        return foodForSatiety;
+    }
+
+    public int getNumberOfMovesAfterHunger() {
+        return numberOfMovesAfterHunger;
+    }
+
+    public int getStarvationCount() {
+        return starvationCount;
+    }
+
+    public void setStarvationCount(int starvationCount) {
+        this.starvationCount = starvationCount;
+    }
+
+    public double getWeightLoss() {
+        return weightLoss;
+    }
+
+    public void setWeightLoss(double weightLoss) {
+        this.weightLoss = weightLoss;
     }
 
     public double getSatiety() {

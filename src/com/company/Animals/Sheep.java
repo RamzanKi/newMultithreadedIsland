@@ -20,30 +20,6 @@ public class Sheep extends Herbivore {
     private int starvationCount = 5;
     private double weightLoss = 1;
 
-    public double getFoodForSatiety() {
-        return foodForSatiety;
-    }
-
-    public int getNumberOfMovesAfterHunger() {
-        return numberOfMovesAfterHunger;
-    }
-
-    public int getStarvationCount() {
-        return starvationCount;
-    }
-
-    public void setStarvationCount(int starvationCount) {
-        this.starvationCount = starvationCount;
-    }
-
-    public double getWeightLoss() {
-        return weightLoss;
-    }
-
-    public void setWeightLoss(double weightLoss) {
-        this.weightLoss = weightLoss;
-    }
-
 
 
     public Sheep(int i, int j) {
@@ -84,6 +60,30 @@ public class Sheep extends Herbivore {
                 this.satiety = foodForSatiety;
             }
         }
+    }
+
+    public double getFoodForSatiety() {
+        return foodForSatiety;
+    }
+
+    public int getNumberOfMovesAfterHunger() {
+        return numberOfMovesAfterHunger;
+    }
+
+    public int getStarvationCount() {
+        return starvationCount;
+    }
+
+    public void setStarvationCount(int starvationCount) {
+        this.starvationCount = starvationCount;
+    }
+
+    public double getWeightLoss() {
+        return weightLoss;
+    }
+
+    public void setWeightLoss(double weightLoss) {
+        this.weightLoss = weightLoss;
     }
 
     public double getSatiety() {
