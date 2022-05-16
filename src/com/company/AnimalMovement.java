@@ -15,7 +15,6 @@ public class AnimalMovement {
             animalList.removeIf(a -> a.getClass() == EmptySpace.class);
         }
             List<Animal> animalList = Location.loc.get(cells);
-            List<Animal> animals = new CopyOnWriteArrayList<>(animalList);
 
             for (Animal animal : animalList) {
                 if (animal.getClass() == EmptySpace.class || animal.getClass() == Plants.class || animal.getClass() == Brick.class) {
