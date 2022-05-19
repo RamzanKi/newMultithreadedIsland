@@ -18,7 +18,7 @@ public class Main {
             }
             executorService.submit(new GetStatistics());
             executorService.shutdownNow();
-            executorService.awaitTermination(2000, TimeUnit.MILLISECONDS);
+            executorService.awaitTermination(1000, TimeUnit.MILLISECONDS);
         }
     }
 }
