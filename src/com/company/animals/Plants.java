@@ -18,7 +18,7 @@ public class Plants extends Animal{
 
     @Override
     public int getMaxAmountInCell() {
-        return maxAmountInCell;
+        return this.maxAmountInCell;
     }
 
     @Override
