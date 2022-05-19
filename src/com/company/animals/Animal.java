@@ -49,6 +49,28 @@ public abstract class Animal {
             }
         }
     }
+    public void eat(Animal animal, List<Animal> animalList) {
+        String simpleName = animal.getClass().getSimpleName();
+        int chance = 0;
+        for (String s : chanceToEat.keySet()) {
+            if (simpleName.equals(s)) {
+                chance = chanceToEat.get(s);
+                break;
+            }
+        }
+        int random = ThreadLocalRandom.current().nextInt(1,11);
+        if (random >= 1 && random <= chance) {
+            String[] split = animal.getIndex().split(":");
+            int i = Integer.parseInt(split[0]);
+            int j = Integer.parseInt(split[1]);
+            animalList.set(animalList.indexOf(animal), new EmptySpace(i, j));
+            this.satiety += animal.getWeight();
+            if (this.satiety > this.foodForSatiety) {
+                this.satiety = foodForSatiety;
+            }
+        }
+    }
+
     public abstract Animal reproduce(Animal animal);
 
     public double getFoodForSatiety() {
@@ -90,35 +112,13 @@ public abstract class Animal {
     public String getIndex() {
         return this.locIndexi +":"+ this.locIndexj;
     }
-
     public void setIndex(int i, int j) {
         this.locIndexi = i;
         this.locIndexj = j;
     }
+
     public double getWeight() {
         return this.weight;
-    }
-
-    public void eat(Animal animal, List<Animal> animalList) {
-        String simpleName = animal.getClass().getSimpleName();
-        int chance = 0;
-        for (String s : chanceToEat.keySet()) {
-            if (simpleName.equals(s)) {
-                chance = chanceToEat.get(s);
-                break;
-            }
-        }
-        int random = ThreadLocalRandom.current().nextInt(1,11);
-        if (random >= 1 && random <= chance) {
-            String[] split = animal.getIndex().split(":");
-            int i = Integer.parseInt(split[0]);
-            int j = Integer.parseInt(split[1]);
-            animalList.set(animalList.indexOf(animal), new EmptySpace(i, j));
-            this.satiety += animal.getWeight();
-            if (this.satiety > this.foodForSatiety) {
-                this.satiety = foodForSatiety;
-            }
-        }
     }
 
     @Override
