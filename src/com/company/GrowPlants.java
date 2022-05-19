@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.Animals.Animal;
-import com.company.Animals.Plants;
+import com.company.animals.Animal;
+import com.company.animals.Plants;
 
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;

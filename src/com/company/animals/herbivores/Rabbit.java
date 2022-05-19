@@ -1,29 +1,29 @@
-package com.company.Animals;
+package com.company.animals.herbivores;
 
+import com.company.AnimalStat;
+import com.company.animals.Animal;
 import com.company.EmptySpace;
-import com.company.Location;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Rabbit extends Herbivore {
-    private final String name = "\uD83D\uDC07";
-    private final double weight = 3.0;
-    private final int maxAmountInCell = 750;
-    private final int maxSpeed = 3 + 1;
-    private final double foodForSatiety = 4;
-    private final int numberOfMovesAfterHunger = 7;
-    private int locIndexi;
-    private int locIndexj;
-    private double satiety;
-    private int starvationCount = 7;
-    private double weightLoss = 1;
+import static com.company.AnimalStat.*;
 
+public class Rabbit extends Herbivore {
 
     public Rabbit(int i, int j) {
         this.locIndexi = i;
         this.locIndexj = j;
+
+        this.name = rabbitName;
+        this.weight = rabbitWeight;
+        this.maxAmountInCell = rabbitMaxAmountInCell;
+        this.maxSpeed = rabbitMaxSpeed;
+        this.foodForSatiety = rabbitFoodForSatiety;
+        this.numberOfMovesAfterHunger = rabbitNumberOfMovesAfterHunger;
+        this.starvationCount = rabbitStarvationCount;
+        this.weightLoss = rabbitWeightLoss;
     }
 
     @Override
@@ -71,72 +71,6 @@ public class Rabbit extends Herbivore {
                 this.satiety = foodForSatiety;
             }
         }
-    }
-
-    public double getFoodForSatiety() {
-        return foodForSatiety;
-    }
-
-    public int getNumberOfMovesAfterHunger() {
-        return numberOfMovesAfterHunger;
-    }
-
-    public int getStarvationCount() {
-        return starvationCount;
-    }
-
-    public void setStarvationCount(int starvationCount) {
-        this.starvationCount = starvationCount;
-    }
-
-    public double getWeightLoss() {
-        return weightLoss;
-    }
-
-    public void setWeightLoss(double weightLoss) {
-        this.weightLoss = weightLoss;
-    }
-
-    public double getSatiety() {
-        return satiety;
-    }
-
-    public void setSatiety(double satiety) {
-        this.satiety = satiety;
-    }
-
-    @Override
-    public void moveDirection() {
-        int randomDirection = ThreadLocalRandom.current().nextInt(4);
-        if (randomDirection == 0) {
-            setIndex(this.locIndexi - ThreadLocalRandom.current().nextInt(this.maxSpeed), this.locIndexj);
-            if (this.locIndexi < 0) {
-                setIndex(0, this.locIndexj);
-            }
-        }
-        if (randomDirection == 1) {
-            setIndex(this.locIndexi, this.locIndexj + ThreadLocalRandom.current().nextInt(this.maxSpeed));
-            if (this.locIndexj > Location.island[0].length - 1) {
-                setIndex(this.locIndexi, Location.island[0].length - 1);
-            }
-        }
-        if (randomDirection == 2) {
-            setIndex(this.locIndexi + ThreadLocalRandom.current().nextInt(this.maxSpeed), this.locIndexj);
-            if (this.locIndexi > Location.island.length - 1) {
-                setIndex(Location.island.length - 1, this.locIndexj);
-            }
-        }
-        if (randomDirection == 3) {
-            setIndex(this.locIndexi, this.locIndexj - ThreadLocalRandom.current().nextInt(this.maxSpeed));
-            if (this.locIndexj < 0) {
-                setIndex(this.locIndexi, 0);
-            }
-        }
-    }
-
-    @Override
-    public double getWeight() {
-        return this.weight;
     }
 
     @Override

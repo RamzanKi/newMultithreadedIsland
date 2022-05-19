@@ -1,4 +1,4 @@
-package com.company.Animals;
+package com.company.animals;
 
 import java.util.List;
 import java.util.Objects;
@@ -15,6 +15,7 @@ public class Plants extends Animal{
         this.locIndexi = i;
         this.locIndexj = j;
     }
+
     @Override
     public int getMaxAmountInCell() {
         return maxAmountInCell;

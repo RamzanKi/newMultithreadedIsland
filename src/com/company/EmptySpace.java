@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.Animals.Animal;
+import com.company.animals.Animal;
 
 import java.util.List;
 import java.util.Objects;

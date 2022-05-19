@@ -1,6 +1,8 @@
 package com.company;
 
-import com.company.Animals.*;
+import com.company.animals.*;
+import com.company.animals.herbivores.*;
+import com.company.animals.predators.Snake;
 
 import java.util.List;
 import java.util.Map;

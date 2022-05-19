@@ -1,10 +1,8 @@
-package com.company.Animals;
+package com.company.animals;
 
 import java.util.List;
 
-public class Herbivore extends Animal {
-
-
+public class Brick extends Animal {
     @Override
     public double getFoodForSatiety() {
         return 0;
@@ -22,7 +20,6 @@ public class Herbivore extends Animal {
 
     @Override
     public void setStarvationCount(int starvationCount) {
-
     }
 
     @Override
@@ -52,10 +49,12 @@ public class Herbivore extends Animal {
 
     @Override
     public void moveDirection() {
+
     }
 
     @Override
     public void setIndex(int i, int j) {
+
     }
 
     @Override
@@ -77,4 +76,6 @@ public class Herbivore extends Animal {
     public void setSatiety(double satiety) {
 
     }
+
+
 }

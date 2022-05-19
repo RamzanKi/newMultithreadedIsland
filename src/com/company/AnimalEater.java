@@ -1,8 +1,8 @@
 package com.company;
 
-import com.company.Animals.Animal;
-import com.company.Animals.Brick;
-import com.company.Animals.Plants;
+import com.company.animals.Animal;
+import com.company.animals.Brick;
+import com.company.animals.Plants;
 
 import java.util.List;
 
