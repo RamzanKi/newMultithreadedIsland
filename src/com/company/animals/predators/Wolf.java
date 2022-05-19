@@ -24,41 +24,7 @@ public class Wolf extends Predator {
         this.numberOfMovesAfterHunger = wolfNumberOfMovesAfterHunger;
         this.starvationCount = wolfStarvationCount;
         this.weightLoss = wolfWeightLoss;
-    }
-
-    @Override
-    public void eat(Animal animal, List<Animal> animalList) {
-        String simpleName = animal.getClass().getSimpleName();
-        int chance = 0;
-        switch (simpleName) {
-            case "Wolf" -> chance = 0;
-            case "Snake" -> chance = 0;
-            case "Sheep" -> chance = 7;
-            case "Rabbit" -> chance = 7;
-            case "Kangaroo" -> chance = 2;
-            case "Horse" -> chance = 4;
-            case "Hamster" -> chance = 9;
-            case "Goat" -> chance = 9;
-            case "Fox" -> chance = 7;
-            case "Eagle" -> chance = 1;
-            case "Duck" -> chance = 8;
-            case "Deer" -> chance = 4;
-            case "Cow" -> chance = 6;
-            case "Caterpillar" -> chance = 0;
-            case "Bear" -> chance = 3;
-            case "Plants" -> chance = 0;
-        }
-        int random = ThreadLocalRandom.current().nextInt(1, 11);
-        if (random >= 1 && random <= chance) {
-            String[] split = animal.getIndex().split(":");
-            int i = Integer.parseInt(split[0]);
-            int j = Integer.parseInt(split[1]);
-            animalList.set(animalList.indexOf(animal), new EmptySpace(i, j));
-            this.satiety += animal.getWeight();
-            if (this.satiety > this.foodForSatiety) {
-                this.satiety = foodForSatiety;
-            }
-        }
+        this.chanceToEat = wolfChanceToEat;
     }
 
     @Override

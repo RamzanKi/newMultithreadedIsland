@@ -23,42 +23,8 @@ public class Sheep extends Herbivore {
         this.foodForSatiety = sheepFoodForSatiety;
         this.numberOfMovesAfterHunger = sheepNumberOfMovesAfterHunger;
         this.starvationCount = sheepStarvationCount;
-        this.weightLoss = snakeWeightLoss;
-    }
-
-    @Override
-    public void eat(Animal animal, List<Animal> animalList) {
-        String simpleName = animal.getClass().getSimpleName();
-        int chance = 0;
-        switch (simpleName){
-            case "Wolf" -> chance = 0;
-            case "Snake" -> chance = 0;
-            case "Sheep" -> chance = 0;
-            case "Rabbit" -> chance = 0;
-            case "Kangaroo" -> chance = 0;
-            case "Horse" -> chance = 0;
-            case "Hamster" -> chance = 0;
-            case "Goat" -> chance = 0;
-            case "Fox" -> chance = 0;
-            case "Eagle" -> chance = 0;
-            case "Duck" -> chance = 0;
-            case "Deer" -> chance = 0;
-            case "Cow" -> chance = 0;
-            case "Caterpillar" -> chance = 0;
-            case "Bear" -> chance = 0;
-            case "Plants" -> chance = 10;
-        }
-        int random = ThreadLocalRandom.current().nextInt(1,11);
-        if (random >= 1 && random <= chance) {
-            String[] split = animal.getIndex().split(":");
-            int i = Integer.parseInt(split[0]);
-            int j = Integer.parseInt(split[1]);
-            animalList.set(animalList.indexOf(animal), new EmptySpace(i, j));
-            this.satiety += animal.getWeight();
-            if (this.satiety > this.foodForSatiety) {
-                this.satiety = foodForSatiety;
-            }
-        }
+        this.weightLoss = sheepWeightLoss;
+        this.chanceToEat = sheepChanceToEat;
     }
 
     @Override

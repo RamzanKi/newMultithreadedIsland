@@ -1,11 +1,14 @@
 package com.company.animals;
 
+import com.company.EmptySpace;
 import com.company.Location;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Animal {
+    public Map<String, Integer> chanceToEat;
     public String name;
     public double weight;
     public int maxAmountInCell;
@@ -96,7 +99,27 @@ public abstract class Animal {
         return this.weight;
     }
 
-    public abstract void eat(Animal animal, List<Animal> animalList);
+    public void eat(Animal animal, List<Animal> animalList) {
+        String simpleName = animal.getClass().getSimpleName();
+        int chance = 0;
+        for (String s : chanceToEat.keySet()) {
+            if (simpleName.equals(s)) {
+                chance = chanceToEat.get(s);
+                break;
+            }
+        }
+        int random = ThreadLocalRandom.current().nextInt(1,11);
+        if (random >= 1 && random <= chance) {
+            String[] split = animal.getIndex().split(":");
+            int i = Integer.parseInt(split[0]);
+            int j = Integer.parseInt(split[1]);
+            animalList.set(animalList.indexOf(animal), new EmptySpace(i, j));
+            this.satiety += animal.getWeight();
+            if (this.satiety > this.foodForSatiety) {
+                this.satiety = foodForSatiety;
+            }
+        }
+    }
 
     @Override
     public String toString() {

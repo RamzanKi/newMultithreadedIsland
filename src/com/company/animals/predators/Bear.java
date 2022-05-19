@@ -1,12 +1,12 @@
-package com.company.animals.herbivores;
+package com.company.animals.predators;
 
-import com.company.AnimalStat;
 import com.company.animals.Animal;
-import com.company.animals.predators.Predator;
 import com.company.EmptySpace;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static com.company.AnimalStat.*;
@@ -25,42 +25,7 @@ public class Bear extends Predator {
         this.numberOfMovesAfterHunger = bearNumberOfMovesAfterHunger;
         this.starvationCount = bearStarvationCount;
         this.weightLoss = bearWeightLoss;
-    }
-
-
-    @Override
-    public void eat(Animal animal, List<Animal> animalList) {
-        String simpleName = animal.getClass().getSimpleName();
-        int chance = 0;
-        switch (simpleName){
-            case "Wolf" -> chance = 2;
-            case "Snake" -> chance = 0;
-            case "Sheep" -> chance = 7;
-            case "Rabbit" -> chance = 0;
-            case "Kangaroo" -> chance = 6;
-            case "Horse" -> chance = 7;
-            case "Hamster" -> chance = 9;
-            case "Goat" -> chance = 7;
-            case "Fox" -> chance = 2;
-            case "Eagle" -> chance = 0;
-            case "Duck" -> chance = 8;
-            case "Deer" -> chance = 8;
-            case "Cow" -> chance = 3;
-            case "Caterpillar" -> chance = 0;
-            case "Bear" -> chance = 0;
-            case "Plants" -> chance = 0;
-        }
-        int random = ThreadLocalRandom.current().nextInt(1,11);
-        if (random >= 1 && random <= chance) {
-            String[] split = animal.getIndex().split(":");
-            int i = Integer.parseInt(split[0]);
-            int j = Integer.parseInt(split[1]);
-            animalList.set(animalList.indexOf(animal), new EmptySpace(i, j));
-            this.satiety += animal.getWeight();
-            if (this.satiety > this.foodForSatiety) {
-                this.satiety = foodForSatiety;
-            }
-        }
+        this.chanceToEat = bearChanceToEat;
     }
 
     @Override

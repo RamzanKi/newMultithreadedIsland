@@ -17,6 +17,9 @@ public class AnimalEater {
                     continue;
                 }
                 for (Animal animal1 : animalList) {
+                    if (animal1.getClass() == EmptySpace.class || animal1.getClass() == Plants.class || animal1.getClass() == Brick.class) {
+                        continue;
+                    }
                     if (animal.getSatiety() >= animal.getFoodForSatiety()) {
                         break;
                     }

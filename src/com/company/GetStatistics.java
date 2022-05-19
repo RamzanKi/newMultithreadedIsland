@@ -59,6 +59,7 @@ public class GetStatistics implements Runnable {
             List<Animal> animals = Location.loc.get(s);
             animals.stream().filter(a -> a.getClass() != Plants.class &&
                             a.getClass() != EmptySpace.class &&
+                            a.getClass() != Brick.class &&
                             a.getClass() != Caterpillar.class &&
                             a.getClass() != Hamster.class &&
                             a.getClass() != Duck.class &&

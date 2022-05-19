@@ -1,6 +1,27 @@
 package com.company;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class AnimalStat {
+    public static final Map<String, Integer> bearChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 2);
+        put("Snake", 0);
+        put("Sheep", 7);
+        put("Rabbit", 0);
+        put("Kangaroo", 6);
+        put("Horse", 7);
+        put("Hamster", 9);
+        put("Goat", 7);
+        put("Fox", 2);
+        put("Eagle", 0);
+        put("Duck", 8);
+        put("Deer", 8);
+        put("Cow", 3);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 0);
+    }};
     public static final String bearName = "\uD83D\uDC3B";
     public static final double bearWeight = 250.0;
     public static final int bearMaxAmountInCell = 7;
@@ -10,6 +31,24 @@ public class AnimalStat {
     public static int bearStarvationCount = 15;
     public static double bearWeightLoss = 1;
 
+    public static final Map<String, Integer> caterpillarChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String caterpillarName = "\uD83D\uDC1B";
     public static final double caterpillarWeight = 5;
     public static final int caterpillarMaxAmountInCell = 10000;
@@ -19,6 +58,24 @@ public class AnimalStat {
     public static int caterpillarStarvationCount = 5;
     public static double caterpillarWeightLoss = 1;
 
+    public static final Map<String, Integer> cowChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String cowName = "\uD83D\uDC04";
     public static final double cowWeight = 350.0;
     public static final int cowMaxAmountInCell = 20;
@@ -28,6 +85,24 @@ public class AnimalStat {
     public static int cowStarvationCount = 4;
     public static double cowWeightLoss = 1;
 
+    public static final Map<String, Integer> deerChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String deerName = "\uD83E\uDD8C";
     public static final double deerWeight = 170.0;
     public static final int deerMaxAmountInCell = 41;
@@ -37,6 +112,24 @@ public class AnimalStat {
     public static int deerStarvationCount = 4;
     public static double deerWeightLoss = 1;
 
+    public static final Map<String, Integer> duckChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 5);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String duckName = "\uD83E\uDD86";
     public static final double duckWeight = 5;
     public static final int duckMaxAmountInCell = 500;
@@ -46,6 +139,24 @@ public class AnimalStat {
     public static int duckStarvationCount = 4;
     public static double duckWeightLoss = 1;
 
+    public static final Map<String, Integer> goatChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String goatName = "\uD83D\uDC10";
     public static final double goatWeight = 65.0;
     public static final int goatMaxAmountInCell = 107;
@@ -55,6 +166,24 @@ public class AnimalStat {
     public static int goatStarvationCount = 5;
     public static double goatWeightLoss = 1;
 
+    public static final Map<String, Integer> hamsterChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String hamsterName = "\uD83D\uDC39";
     public static final double hamsterWeight = 0.03;
     public static final int hamsterMaxAmountInCell = 10000;
@@ -64,6 +193,24 @@ public class AnimalStat {
     public static int hamsterStarvationCount = 3;
     public static double hamsterWeightLoss = 1;
 
+    public static final Map<String, Integer> horseChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String horseName = "\uD83D\uDC0E";
     public static final double horseWeight = 300.0;
     public static final int horseMaxAmountInCell = 23;
@@ -73,6 +220,24 @@ public class AnimalStat {
     public static int horseStarvationCount = 5;
     public static double horseWeightLoss = 1;
 
+    public static final Map<String, Integer> kangarooChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String kangarooName = "\uD83E\uDD98";
     public static final double kangarooWeight = 47.0;
     public static final int kangarooMaxAmountInCell = 149;
@@ -82,6 +247,24 @@ public class AnimalStat {
     public static int kangarooStarvationCount = 8;
     public static double kangarooWeightLoss = 1;
 
+    public static final Map<String, Integer> rabbitChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String rabbitName = "\uD83D\uDC07";
     public static final double rabbitWeight = 3.0;
     public static final int rabbitMaxAmountInCell = 750;
@@ -91,6 +274,24 @@ public class AnimalStat {
     public static int rabbitStarvationCount = 7;
     public static double rabbitWeightLoss = 1;
 
+    public static final Map<String, Integer> sheepChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 0);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 10);
+    }};
     public static final String sheepName = "\uD83D\uDC11";
     public static final double sheepWeight = 45.0;
     public static final int sheepMaxAmountInCell = 156;
@@ -100,6 +301,24 @@ public class AnimalStat {
     public static int sheepStarvationCount = 5;
     public static double sheepWeightLoss = 1;
 
+    public static final Map<String, Integer> eagleChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 5);
+        put("Sheep", 0);
+        put("Rabbit", 9);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 9);
+        put("Goat", 0);
+        put("Fox", 0);
+        put("Eagle", 0);
+        put("Duck", 0);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 0);
+    }};
     public static final String eagleName = "\uD83E\uDD85";
     public static final double eagleWeight = 6.0;
     public static final int eagleMaxAmountInCell = 166;
@@ -109,6 +328,24 @@ public class AnimalStat {
     public static int eagleStarvationCount = 5;
     public static double eagleWeightLoss = 1;
 
+    public static final Map<String, Integer> foxChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 2);
+        put("Sheep", 2);
+        put("Rabbit", 7);
+        put("Kangaroo", 1);
+        put("Horse", 0);
+        put("Hamster", 0);
+        put("Goat", 9);
+        put("Fox", 2);
+        put("Eagle", 0);
+        put("Duck", 1);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 0);
+        put("Bear", 0);
+        put("Plants", 0);
+    }};
     public static final String foxName = "\uD83E\uDD8A";
     public static final double foxWeight = 4.0;
     public static final int foxMaxAmountInCell = 50;
@@ -118,6 +355,24 @@ public class AnimalStat {
     public static int foxStarvationCount = 8;
     public static double foxWeightLoss = 1;
 
+    public static final Map<String, Integer> snakeChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 0);
+        put("Rabbit", 7);
+        put("Kangaroo", 0);
+        put("Horse", 0);
+        put("Hamster", 9);
+        put("Goat", 0);
+        put("Fox", 3);
+        put("Eagle", 0);
+        put("Duck", 5);
+        put("Deer", 0);
+        put("Cow", 0);
+        put("Caterpillar", 9);
+        put("Bear", 0);
+        put("Plants", 0);
+    }};
     public static final String snakeName = "\uD83D\uDC0D";
     public static final double snakeWeight = 2.0;
     public static final int snakeMaxAmountInCell = 123;
@@ -127,6 +382,24 @@ public class AnimalStat {
     public static int snakeStarvationCount = 15;
     public static double snakeWeightLoss = 1;
 
+    public static final Map<String, Integer> wolfChanceToEat = new ConcurrentHashMap<>() {{
+        put("Wolf", 0);
+        put("Snake", 0);
+        put("Sheep", 7);
+        put("Rabbit", 7);
+        put("Kangaroo", 2);
+        put("Horse", 4);
+        put("Hamster", 9);
+        put("Goat", 9);
+        put("Fox", 7);
+        put("Eagle", 1);
+        put("Duck", 8);
+        put("Deer", 4);
+        put("Cow", 6);
+        put("Caterpillar", 0);
+        put("Bear", 3);
+        put("Plants", 0);
+    }};
     public static final String wolfName = "\uD83D\uDC3A";
     public static final double wolfWeight = 50.0;
     public static final int wolfMaxAmountInCell = 30;
